@@ -1,0 +1,18 @@
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+
+.space {
+
+	margin-bottom: 20px;
+}
+.space2{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+td {
+	text-align: center;
+}

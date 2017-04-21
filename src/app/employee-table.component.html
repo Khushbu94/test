@@ -1,0 +1,50 @@
+
+  <app-modal #modal1>
+    <div class="app-modal-header">
+    <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Mobile</th>
+   
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{currentEmployee.name}}</td>
+      <td>{{currentEmployee.email}}</td>
+      <td>{{currentEmployee.address}}</td>
+      <td>{{currentEmployee.mobile}}</td>
+        
+    </tr>
+  </tbody>
+  </table>   
+    </div>
+  </app-modal>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let emp of Employees; let i = index">
+      <td >{{emp.name}}</td>
+      <td>{{emp.email}}</td>
+      <td>
+        <button type="button" (click)="setCurrentEmployee(i); modal1.show()" class="btn">View</button>
+
+        <button (click)="setEditingEmployee(i)" type="button" class="btn">Edit</button>
+      </td>
+    </tr>
+   </tbody>
+</table>
+
+
+

@@ -1,0 +1,38 @@
+
+
+
+<table class="table table-bordered">
+   <thead>
+    <tr>
+      <th>Date</th>
+      <th>Name</th>
+      <th>Salary</th>
+      <th>Bonus</th>
+      <th>Comments</th>     
+
+
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let emp of Payroll; let i = index">
+      <td>{{emp.date}}</td>
+      <td>{{emp.name}}</td>
+      <td>{{emp.salary}}   </td>
+      <td> {{emp.bonus}}  </td>
+      <td>  {{emp.comments}} </td>
+
+
+      
+      <td> 
+          <button (click)="setEditingEmployee(i)" type="button" class="btn">Edit</button>
+          <button (click)="deletePayroll(i)" type="button" class="btn">Delete</button>   
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+

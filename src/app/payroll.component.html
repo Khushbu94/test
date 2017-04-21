@@ -1,0 +1,52 @@
+
+
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+<p class="space"><strong >Payroll Management</strong></p>
+
+<p>Create new payroll:</p>
+
+<div class="form-group">
+  
+  <label for="formGroupExampleInput">Employee</label>
+<select [(ngModel)]="currentlyEditingPayroll.name" name="name" type="text" class="form-control">
+  <!-- <option *ngFor="let emp of Employees"  value={{emp.name}}>{{emp.name}}</option> -->
+  
+</select>
+</div>
+
+
+  <!-- <div class="form-group">
+
+    <label for="formGroupExampleInput">Example label</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Name">
+  </div> -->
+
+
+  <div class="form-group">
+    <label for="formGroupExampleInput2">Date</label>
+    <input [(ngModel)]="currentlyEditingPayroll.date" name="date"  type="date" class="form-control" id="formGroupExampleInput2" placeholder="Date">
+  </div>
+  
+  <div class="form-group">
+    <label for="formGroupExampleInput">Salary</label>
+    <input  [(ngModel)]="currentlyEditingPayroll.salary" name="salary" type="number" class="form-control" id="formGroupExampleInput" placeholder="Salary">
+  </div>
+
+
+  <div class="form-group">
+    <label for="formGroupExampleInput2">Bonus</label>
+    <input [(ngModel)]="currentlyEditingPayroll.bonus" name="bonus" type="number" class="form-control" id="formGroupExampleInput2" placeholder="Bonus">
+  </div>
+
+<div class="form-group">
+  <label for="comment">Comment:</label>
+  <textarea [(ngModel)]="currentlyEditingPayroll.comment" name="comment" type="text" class="form-control" rows="5" id="comment"></textarea>
+</div>
+
+
+<div class="form-group">
+   <button type="submit" class="btn btn-secondary">Save</button>
+</div>
+</form>		

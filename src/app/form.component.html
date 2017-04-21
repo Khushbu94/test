@@ -1,0 +1,37 @@
+
+
+<p class="space"><strong >Employee Management</strong></p>
+
+<p>Create new employee:</p>
+
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+  <div class="form-group">
+
+    <label for="formGroupExampleInput">Name</label>
+    <input [(ngModel)]="currentlyEditingEmployee.name" name="name" type="text" class="form-control" id="formGroupExampleInput" placeholder="Name">
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput2">Email</label>
+    <input [(ngModel)]="currentlyEditingEmployee.email" name="email" type="email" class="form-control" id="formGroupExampleInput2" placeholder="Email">
+  </div>
+  
+  <div class="form-group">
+    <label for="formGroupExampleInput">Address</label>
+    <input [(ngModel)]="currentlyEditingEmployee.address" name="address" type="text" class="form-control" id="formGroupExampleInput" placeholder="Address">
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput2">Mobile</label>
+    <input [(ngModel)]="currentlyEditingEmployee.mobile" name="mobile" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Mobile">
+  </div>
+
+<div class="form-group">
+<button [disabled]="!validate(f.value)" type="submit" class="btn btn-secondary">Save</button>
+</div>
+
+
+</form>		
+
+
+
+
