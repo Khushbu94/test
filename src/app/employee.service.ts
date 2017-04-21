@@ -9,10 +9,13 @@ export class EmployeeService {
 
 	constructor() {
 		//localStorage.clear();
-		EmployeeService.Employees = JSON.parse(localStorage.getItem('Employees'));
+		if(!EmployeeService.Employees){
+			EmployeeService.Employees = JSON.parse(localStorage.getItem('Employees'));
 		if (EmployeeService.Employees === null) {
 			EmployeeService.Employees = [];
 		}
+		}
+		
 	}
 
 	getCurrentlyEditing() {

@@ -22,7 +22,7 @@ export class EmployeePayrollService {
 	addEmployee(emp: any){
       EmployeePayrollService.Payroll.push(emp);
       console.log(EmployeePayrollService.Payroll);
-      localStorage.setItem('Payroll', JSON.stringify(EmployeePayrollService.Payroll);
+      localStorage.setItem('Payroll', JSON.stringify(EmployeePayrollService.Payroll));
 	}
 
 	getEmployees() {

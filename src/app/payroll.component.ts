@@ -11,7 +11,7 @@ import { EmployeePayrollService } from './employee-payroll.service';
 })
 export class PayrollComponent implements DoCheck  { name = 'HR Management' ;
 
-//Employees = this.empService.getEmployees(); 
+Employees = this.empService.getEmployees(); 
 
 constructor(private payrollService: EmployeePayrollService, private empService: EmployeeService) {
 		this.getEditInfo();

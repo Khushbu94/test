@@ -11,7 +11,7 @@
   
   <label for="formGroupExampleInput">Employee</label>
 <select [(ngModel)]="currentlyEditingPayroll.name" name="name" type="text" class="form-control">
-  <!-- <option *ngFor="let emp of Employees"  value={{emp.name}}>{{emp.name}}</option> -->
+  <option *ngFor="let emp of Employees"  value={{emp.name}}>{{emp.name}}</option>
   
 </select>
 </div>
